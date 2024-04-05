@@ -23,6 +23,9 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if(active)
         {
+            float randomX = Random.Range(screenBounds.x - objectWidth, screenBounds.x * -1 + objectWidth);
+            float spawnY = (screenBounds.y + objectHeight) + 5;
+
             Instantiate(bombPrefab, new Vector3(randomX, spawnY, 0), bombPrefab.transform.rotation);
             ResetDelay();
         }
