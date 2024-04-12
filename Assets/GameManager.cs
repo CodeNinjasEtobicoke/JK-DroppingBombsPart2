@@ -5,14 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Spawner spawner;
+    public GameObject title;
+    private Vector2 screenBounds;
      void Awake()
     {
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z))
     }
     // Start is called before the first frame update
     void Start()
     {
         spawner.active = false;
+        title.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,6 +25,12 @@ public class GameManager : MonoBehaviour
         if (Input.anyKeyDown)
         {
             spawner.active = true;
+            title.SetActive(false);
+        }
+        var nextBomb = gameObject.FindGameObjectsWithTag("Bomb");
+        foreach (GameObject bombObject in nextBomb)
+        {
+            if 
         }
     }
 }
