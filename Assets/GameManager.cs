@@ -30,17 +30,26 @@ public class GameManager : MonoBehaviour
     {
         if (!gameStarted)
         {
-
             if (Input.anyKeyDown)
             {
                 ResetGame();
-            }else
+            } 
+            else
             {
                 if (!player)
                 {
                     OnPlayerKilled();
                 }
-            }        
+            }
+        }
+
+        var nextBomb = GameObject.FindGameObjectsWithTag("Bomb");
+        foreach (GameObject bombObject in nextBomb)
+        {
+            if(bombObject.transform.position.y < (-screenBounds.y) - 12 || !gameStarted)
+            {
+                Destroy(bombObject);
+            }
         }
     }
     private void ResetGame()
@@ -55,9 +64,9 @@ public class GameManager : MonoBehaviour
         spawner.active = false;
         gameStarted = false;
 
-
         splash.SetActive(true);
     }
 }
+
 
 
