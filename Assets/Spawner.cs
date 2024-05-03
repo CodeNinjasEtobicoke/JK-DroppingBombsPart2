@@ -12,6 +12,8 @@ public class Spawner : MonoBehaviour
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,8 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if(active)
         {
-            float randomX = Random.Range(screenBounds.x - objectWidth, screenBounds.x * -1 + objectWidth);
-            float spawnY = (screenBounds.y + objectHeight) + 5;
+            float randomX = Random.Range(screenBounds.x - objectWidth, screenBounds.x * -1f + objectWidth);
+            float spawnY = (screenBounds.y + objectHeight) + 5f;
 
             Instantiate(bombPrefab, new Vector3(randomX, spawnY, 0), bombPrefab.transform.rotation);
             ResetDelay();

@@ -57,7 +57,9 @@ public class GameManager : MonoBehaviour
             if (!gameStarted)
             {
                 Destroy(bombObject);
-            }else if (bombObject.transform.position.y < (-screenBounds.y) && gameStarted)
+            } 
+
+            else if (bombObject.transform.position.y < (-screenBounds.y) && gameStarted)
             {
                 scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
 
