@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4023973168203873482}
   - component: {fileID: 1988255991}
   - component: {fileID: 1988255992}
+  - component: {fileID: 8793290563328393694}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -171,6 +172,20 @@ MonoBehaviour:
   speed: 10
   movementType: 0
   platformSettings: 0
+--- !u!114 &8793290563328393694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293495186871882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d07e965c02d9344b9b6e038d0a54d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 8010788802504807132, guid: 28e193f18b81b6248986390dc1f60a5e,
+    type: 3}
 --- !u!1 &6548849664879483487
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6548849664879483487}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1800619896210494971}
@@ -4951,7 +4966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8459009060690974750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7373060022340726489}

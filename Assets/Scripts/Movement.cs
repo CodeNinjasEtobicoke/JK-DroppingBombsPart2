@@ -9,12 +9,6 @@ public class Movement : MonoBehaviour
     [Header("Movement")]
     [Tooltip("Speed of movement")]
     public float speed;
-    public enum MovementType
-    {
-        AllDirections,
-        HorizontalOnly,
-        VerticalOnly
-    }
 
     [SerializeField]
     private MovementType movementType = 0;
@@ -22,10 +16,15 @@ public class Movement : MonoBehaviour
     [Header("Platform Movement")]
     [Tooltip("Adjusts Movement for Platform Games")]
     public bool platformSettings = false;
+    
+    public enum MovementType
+    {
+        AllDirections,
+        HorizontalOnly,
+        VerticalOnly
+    }
 
     private float masterSpeed;
-
-
 
 
     void Awake()

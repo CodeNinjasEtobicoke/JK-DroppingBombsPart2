@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         scoreSystem.GetComponent<Score>().Start();
 
     }
+
     void OnPlayerKilled()
     {
         spawner.active = false;
