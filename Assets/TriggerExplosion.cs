@@ -9,7 +9,10 @@ public class TriggerExplosion : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+        if (collision.gameObject.tag == "Bomb")
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
     }
     // Start is called before the first frame update
     void Start()

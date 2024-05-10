@@ -70,5 +70,13 @@ public class Movement : MonoBehaviour
         transform.position += movement * Time.deltaTime * speed;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bomb")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
 
